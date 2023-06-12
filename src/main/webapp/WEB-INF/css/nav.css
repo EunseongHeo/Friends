@@ -1,0 +1,50 @@
+@charset "UTF-8";
+	
+	body {
+		background-color: #b2bda0;
+	}
+	
+/* 네비게이션 바를 위한 코드 */
+	.nav{
+		position: fixed;
+		margin: 0 auto;
+		left: 0;
+		right: 0;
+		display: grid;
+		justify-content: center;
+		grid-template-columns: 130px 100px 100px 100px 100px 100px 100px ; /*Make the grid smaller than the container*/
+		gap: 30px;
+		background-color: #ebefe3;
+		margin: 0 auto;
+		padding: 0px;
+		width: 1000px;
+		border-radius: 20px 20px 0px 0px;
+	}
+	.nav > div {
+		text-align: center;
+		padding: 20px 0;
+	}
+	.nav > div:hover {
+		background-color: rgba(255, 255, 255, 0.8);
+	}
+	.nav_logo{
+		width: 100px;	
+		margin: 15px 10px;
+		float: left;
+	}
+	.nav_icon{
+		width: 80px;
+	}
+	.nav-item{
+		display: inline-block;
+		padding: 15px;
+	}
+	
+	/* #ebefe3 색의 피드의 바탕색을 위한 코드 */ 
+	.peed_bg{
+		background-color: #ebefe3;
+		margin: 0 auto;
+		width: 1000px;
+		height: 110vh;
+		border-radius: 20px 20px 0px 0px;
+	}
