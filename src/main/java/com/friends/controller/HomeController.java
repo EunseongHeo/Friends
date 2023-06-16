@@ -27,10 +27,18 @@ public class HomeController {
 		return "home";
 	}
 	
+//	homePeed 페이지로 분기
 	@RequestMapping(value = "/home", method = RequestMethod.GET)
 	public String homePeed() {
 		log.info("homePeed() Method of HomeController class");
 		return "/peed/homePeed";
+	}
+	
+//	createPost 페이지로 분기
+	@RequestMapping("/createPost")
+	public String createPost() {
+		log.info("followRequest() Method of HomeController class");
+		return "/peed/createPost";
 	}
 	
 //	followRequest 페이지로 분기

@@ -7,8 +7,39 @@
 		margin: 60px auto;
 		padding: 0 10px;
 		width: 800px;
-		height: 80px;
+		height: 100px;
 		border-radius: 20px 20px 20px 20px;
+	}
+	.peed_create_container{
+		width: 750px;
+		height: 90px;
+		margin: 10px 20px 15px 10px;
+	}
+	.peed_create_text{
+		float: right;
+		width: 600px;
+		text-align: left;
+		margin: 20px auto;
+		margin-left: 10px;
+		padding: 15px;
+		font-size: 1rem;
+		border: 5px solid #526534;
+		border-radius: 30px;
+	}
+	.peed_create_text:hover{
+		float: right;
+		width: 600px;
+		text-align: left;
+		margin: 20px auto;
+		margin-left: 10px;
+		padding: 15px;
+		font-size: 1rem;
+		border: 5px solid #526534;
+		border-radius: 30px;
+		background-color: beige;
+		cursor: pointer;
+		
+		
 	}
 	
 	/* 하나의 피드 부분을 묶기 위한 코드 */
@@ -28,14 +59,46 @@
 		margin: 10px auto;
 		width: 800px;
 		height: 100px;
-		border: 5px solid purple;
 	}
+	.peed_info_container{
+		width: 750px;
+		height: 90px;
+		margin: 5px auto;
+	}
+	.profile{
+		width: 85px;
+		height: 85px;
+		display: inline-block;
+		text-align: left;
+		margin: 5px auto;
+	}
+	.profile > img{
+		width: 85px;
+		height: 85px;
+		display: inline-block;
+	}
+	.info{
+		float: right;
+		height: 70px;
+		width: 650px;
+		text-align: left;
+		margin: 20px auto;
+	}
+	.username{
+		height: 35px;
+		font-weight: bold;
+		font-size: 1.5rem;
+	}
+	.writeTime{
+		height: 35px;
+	
+	}
+	
 	/* 피드의 text 영역에 대한 코드 */
 	.peed_content_text{
 		background-color: white;
 		margin: 5px auto;
 		width: 800px;
-		border: 5px solid purple;
 	}
 	/* 피드의 img 영역에 대한 코드 이미지/동영상 택일이나 편의상 img로 네이밍*/
 	.peed_content_img{
@@ -43,7 +106,6 @@
 		margin: 0 auto;
 		width: 800px;
 		height: 400px;
-		border: 5px solid skyblue;
 	}
 	
 	/* img 중앙정렬을 위한 img-box */
@@ -73,25 +135,48 @@
 		height: 60px;
 		border-top: 5px solid #b2bda0;
 	}
-	/* 좋아요 영역에 대한 코드 */
-	.action_like{
+	.action_box{
 		background-color: white;
 		width: 260px;
 		height: 60px;
 		border-right: 5px solid #b2bda0;
 	}
-	/* 댓글달기 영역에 대한 코드 */
-	.action_reply{
+	.action_box + div{
 		background-color: white;
 		width: 260px;
 		height: 60px;
-		border-right: 5px solid #b2bda0;
+		
 	}
 	/* 공유하기 영역에 대한 코드 */
-	.action_share{
-		background-color: white;
-		width: 260px;
-		height: 60px;
+/* 	.action_share{
+	} */
+	/* action */
+	.action_container{
+		width: 240px;
+		height: 50px;
+		margin: 5px auto;
+	}
+	.action_img{
+		display: inline-block;
+		text-align: left;
+		margin: 0 auto;
+		margin-left: 10px;
+		width: 50px;
+		height: 50px;
+	}
+	.action_img > img{
+		width: 50px;
+		height: 50px;
+		display: inline-block;
+	}
+	.action{
+		float: right;
+		height: 50px;
+		width: 170px;
+		text-align: center;
+		margin: 10px auto;
+		font-size: 2rem;
+		
 	}
 	
 	/* 댓글 영역 묶은 코드 */

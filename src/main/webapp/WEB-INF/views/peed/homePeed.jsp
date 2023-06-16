@@ -44,17 +44,51 @@
 	<!-- section start -->
 	<div class="peed_bg">
 		<div class="" style="height: 140px">&nbsp;</div>
-		<div class="peed_create" >
-			오늘 있었던 일에 대해서 한 줄 적어주세요.
+		<div class="peed_create"  onclick="location.href='createPost'">
+			<div class="peed_create_container">
+				<div class="profile">
+					<img alt="profile" src="img/icon/g_profile.png">
+				</div>
+				<div class="peed_create_text">
+					username님 오늘 하루는 어떠셨나요?
+				</div>
+			</div>
 		</div>
 		
 	<!-- DB 데이터 양에 따라 반복될 코드 start -->
 		<!-- 피드에 대한 코드 -->
 		<div class="peed_body" >
 			<div class="peed_content_info ">
-				peed info 영역
+				<!-- peed info 영역 -->
+				<div class="peed_info_container">
+					<div class="profile">
+						<img alt="profile" src="img/icon/g_profile.png">
+					</div>
+					<div class="info">
+						<div class="username">
+							username
+						</div>
+						<div class="writeTime">
+							write time
+						</div>
+					</div>
+				</div>
 			</div>
 			<div class="peed_content_text">
+				텍스트 영역
+				<br/>
+				<br/>
+				<br/>
+				<br/>
+				a;lwekf;aoifd
+				<br/>
+				<br/>
+				텍스트 영역
+				<br/>
+				텍스트 영역
+				<br/>
+				텍스트 영역
+				<br/>
 				텍스트 영역
 			</div>
 			
@@ -83,21 +117,36 @@
 				<img alt="좋아요 표시 영역" src="img/icon/p_heart.png" width="50px"> 2,256 좋아요
 			</div>
 			<div class="action_choose" >
-				<div class="action_like" >
-					like
+				<div class="action_box" >
+					<div class="action_container">
+						<img class="action_img" alt="like" src="img/icon/g_heart.png">
+						<div class="action">
+							좋아요
+						</div>
+					</div>
 				</div>
-				<div class="action_reply" >
-					reply
+				<div class="action_box" >
+					<div class="action_container">
+						<img class="action_img" alt="reply" src="img/icon/g_reply.png">
+						<div class="action">
+							댓글달기
+						</div>
+					</div>
 				</div>
-				<div class="action_share" >
-					share 
+				<div class="" >
+					<div class="action_container">
+						<img class="action_img" alt="share" src="img/icon/share.png">
+						<div class="action">
+							공유하기
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 		<!-- 댓글에 대한 코드 -->
 		<div class="comment_body">
 			댓글 영역
-			댓글이 없는 경우 생략됨. adfawe
+			댓글이 없는 경우 생략됨. 
 		</div>
 	<!-- DB 데이터 양에 따라 반복될 코드 end -->
 		
@@ -109,8 +158,12 @@
 	<script type="text/javascript" src="js/code.jquery.com_jquery-3.7.0.min.js"></script>
 	<script type="text/javascript" src="js/peed/slide_img.js"></script>
 	<script type="text/javascript">
-	console.log("homePeed script tag");
-	console.log("수정 필요. < 버튼 동작x 함수 수정 javascript");
+		console.log("homePeed script tag");
+		console.log("수정 필요. < 버튼 동작x 함수 수정 javascript");
+	
+		function create_post() {
+			console.log("go to create post page");
+		}
 	</script>
 
 </body>
