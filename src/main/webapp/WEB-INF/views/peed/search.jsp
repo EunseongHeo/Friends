@@ -1,4 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html; charset=UTF-8"	    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %><%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -7,7 +10,6 @@
 <title>search</title>
 	<!-- css 파일 -->
 	<link rel="stylesheet" href="css/nav.css"/>
-	<link rel="stylesheet" href="css/homePeed.css"/>
 </head>
 <body>
 	
@@ -39,7 +41,7 @@
 	<!-- section start -->
 	<div class="peed_bg">
 		<div class="" style="height: 140px">&nbsp;</div>
-		myPeed.jsp 입니다.
+		search.jsp 입니다.
 	</div>
 	<!-- section end -->
 
