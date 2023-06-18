@@ -44,12 +44,12 @@
 	<!-- section start -->
 	<div class="peed_bg">
 		<div class="" style="height: 140px">&nbsp;</div>
-		<div class="peed_create"  onclick="location.href='createPost'">
-			<div class="peed_create_container">
+		<div class="post_create"  onclick="location.href='createPost'">
+			<div class="post_create_container">
 				<div class="profile">
 					<img alt="profile" src="img/icon/g_profile.png">
 				</div>
-				<div class="peed_create_text">
+				<div class="post_create_text">
 					username님 오늘 하루는 어떠셨나요?
 				</div>
 			</div>

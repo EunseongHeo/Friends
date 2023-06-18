@@ -1,8 +1,50 @@
 @charset "UTF-8";
-/* homePeed.jsp 페이지의 css 코드의 집합 */
+/* createPost.jsp 페이지의 css 코드의 집합 */
+	
+	body {
+		background-color: #b2bda0;
+	}
+	
+	.nav{
+		left: 2px;
+		right: 0;
+		background-color: #ebefe3;
+		margin: 0 auto;
+		padding: 0px;
+		width: 1000px;
+		height: 130px;
+		border-radius: 20px 20px 0px 0px;
+		background-color: blue;
+	}
+	.nav > div {
+		background-color: green;
+		text-align: left;
+		margin-left: auto 20px;
+	}
+	.nav > div:hover {
+		cursor: pointer;
+	}
+	
+	/* #ebefe3 색의 피드의 바탕색을 위한 코드 */ 
+	.peed_bg{
+		/* background-color: #ebefe3; */
+		background-color: yellow;
+		margin: 0 auto;
+		width: 1000px;
+		height: 110vh;
+	}
+	
+	/* create post */
+	.create_post{
+		background-color: pink;
+	}
+	.create_post > div{
+		font-size: 3rem;
+	}
+	
 
 	/* 오늘 있었던 일에 대해서 한 줄 적어주세요.에 해당하는 부분의 코드 */ 
-	.post_create{
+	.peed_create{
 		background-color: white;
 		margin: 60px auto;
 		padding: 0 10px;
@@ -10,12 +52,12 @@
 		height: 100px;
 		border-radius: 20px 20px 20px 20px;
 	}
-	.post_create_container{
+	.peed_create_container{
 		width: 750px;
 		height: 90px;
 		margin: 10px 20px 15px 10px;
 	}
-	.post_create_text{
+	.peed_create_text{
 		float: right;
 		width: 600px;
 		text-align: left;
@@ -26,7 +68,7 @@
 		border: 5px solid #526534;
 		border-radius: 30px;
 	}
-	.post_create_text:hover{
+	.peed_create_text:hover{
 		float: right;
 		width: 600px;
 		text-align: left;
