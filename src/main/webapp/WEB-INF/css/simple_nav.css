@@ -1,0 +1,41 @@
+@charset "UTF-8";
+	
+	body {
+		background-color: #b2bda0;
+	}
+	
+/* 네비게이션 바를 위한 코드 */
+	.nav{
+		margin: 0 auto;
+		left: 0;
+		right: 0;
+		justify-content: center;
+		gap: 30px;
+		background-color: #ebefe3;
+		padding: 0px;
+		width: 1000px;
+		height: 130px;
+		border-radius: 20px 20px 0px 0px;
+	}
+	.back_container {
+		margin: 50px;
+		padding: 20px 10px;
+		text-align: left;
+		height: 100px;
+	}
+	.back{
+		font-size: 2em;
+		font-weight: bold;
+		text-decoration: none;
+		color: #526534;
+	}
+	
+	/* #ebefe3 색의 피드의 바탕색을 위한 코드 */ 
+	.peed_bg{
+		background-color: #ebefe3;
+		margin: 0 auto;
+		padding: 20px 0;
+		width: 1000px;
+		height: 85vh;
+		border-radius: 0px 0px 20px 20px ;
+	}

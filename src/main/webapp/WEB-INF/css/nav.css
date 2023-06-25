@@ -15,7 +15,6 @@
 		grid-template-columns: 130px 100px 100px 100px 100px 100px 100px ; /*Make the grid smaller than the container*/
 		gap: 30px;
 		background-color: #ebefe3;
-		margin: 0 auto;
 		padding: 0px;
 		width: 1000px;
 		border-radius: 20px 20px 0px 0px;

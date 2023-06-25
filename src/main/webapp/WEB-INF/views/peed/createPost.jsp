@@ -8,41 +8,88 @@
 <meta charset="UTF-8">
 <title>피드생성</title>
 	<!-- css 파일 -->
-	<link rel="stylesheet" href="css/nav.css"/>
+	<link rel="stylesheet" href="css/simple_nav.css"/>
+	<link rel="stylesheet" href="css/peed/createPost.css"/>
 </head>
 <body>
 	
 	<!-- nav start -->
 	<div class="nav " >		
-		<img class="nav_logo" src="img/icon/nav_logo.png" alt="Friends Logo" />
-		<div class="">
-			<a class="nav_icon " href="home"><img class="active_page_icon nav_icon  " src="img/icon/nav_home.png"/></a>
-		</div>
-		<div class="">
-			<a class="nav_icon " href="followRequest"><img class="nav_icon " src="img/icon/nav_followList.png"/></a>
-		</div>
-		<div class="">
-			<a class="nav_icon " href="videoes"><img class="nav_icon " src="img/icon/nav_vidoes.png"/></a>
-		</div>
-		<div class="">
-			<a class="nav_icon " href="myPeed"><img class="nav_icon " src="img/icon/g_profile.png"/></a>
-		</div>
-		<div class="">
-			<a class="nav_icon " href="search"><img class="nav_icon " src="img/icon/nav_search.png"/></a>
-		</div>
-		<div class="">
-			<a class="nav_icon " href="chat"><img class="nav_icon " src="img/icon/nav_chat.png"/></a>
+		<div class="back_container">
+			<a class="back" href="javascript:history.back()">◀ 게시물 만들기</a>
 		</div>
 	</div>
 	<!-- nav end -->
 	
-	
 	<!-- section start -->
 	<div class="peed_bg">
-		<div class="" style="height: 140px">&nbsp;</div>
-		createPost.jsp 입니다.
+		<div class="container">
+			<form action="createPostOK">
+				<table class="tb_c_post" >
+					<tr>
+						<td rowspan="2" colspan="1">
+							<div class="profile_container">
+								<img alt="profile" src="img/icon/g_profile.png" class="profile">
+							</div>
+						</td>
+						<td>
+							<span>
+								username
+							</span>
+						</td>
+						<td colspan="3">&nbsp;</td>
+					</tr>
+					<tr>
+						<td>
+							range of showing
+						</td>
+						<td colspan="3">&nbsp;</td>
+					</tr>
+					<tr>
+						<td colspan="5">
+							<div class="textarea_container">
+								<textarea 
+									placeholder="username님, 무슨 생각을 하고 계신가요?" 
+									style="resize: none; overflow: hidden;"></textarea>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+						<td >
+							<div class="img_container">
+								<img alt="add images" src="img/icon/add_img.png" onclick="add_imgs()">
+								<img alt="add a video" src="img/icon/add_video.png" onclick="add_video()">
+								<img alt="tag someone" src="img/icon/add_tag.png" onclick="tag_someone()">
+							</div>
+						</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td colspan="5" >
+							<hr/>
+							<div class="btn_container">
+								<input class="btn" type="submit" value="게시"/>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
 	</div>
 	<!-- section end -->
 
+
+	<script type="text/javascript">
+		function add_imgs(){
+			console.log('add images event.');
+		}
+		function add_video(){
+			console.log('add a video event.');
+		}
+		function tag_someone(){
+			console.log('tag someone event.');
+		}
+	</script>
 </body>
 </html>
