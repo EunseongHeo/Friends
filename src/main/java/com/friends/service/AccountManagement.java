@@ -17,13 +17,13 @@ public class AccountManagement implements CRUDService{
 	}
 
 	@Override
-	public void update() {
+	public void update(int index) {
 		// 계정 내용 수정에 대한 코드
 		
 	}
 
 	@Override
-	public void delete() {
+	public void delete(int index) {
 		// 계정 삭제에 대한 코드
 		
 	}

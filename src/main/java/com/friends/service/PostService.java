@@ -17,13 +17,13 @@ public class PostService implements CRUDService{
 	}
 
 	@Override
-	public void update() {
+	public void update(int index) {
 		// POST update에 관련된 메서드 내용
 		
 	}
 
 	@Override
-	public void delete() {
+	public void delete(int index) {
 		// POST delete에 관련된 메서드 내용
 		
 	}

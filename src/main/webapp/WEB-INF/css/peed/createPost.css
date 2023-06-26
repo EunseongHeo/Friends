@@ -1,234 +1,97 @@
 @charset "UTF-8";
-/* createPost.jsp 페이지의 css 코드의 집합 */
+/* createPost.jsp 페이지의 css 코드 */
 	
-	body {
-		background-color: #b2bda0;
-	}
-	
-	.nav{
-		left: 2px;
-		right: 0;
-		background-color: #ebefe3;
-		margin: 0 auto;
-		padding: 0px;
-		width: 1000px;
-		height: 130px;
-		border-radius: 20px 20px 0px 0px;
-		background-color: blue;
-	}
-	.nav > div {
-		background-color: green;
-		text-align: left;
-		margin-left: auto 20px;
-	}
-	.nav > div:hover {
-		cursor: pointer;
-	}
-	
-	/* #ebefe3 색의 피드의 바탕색을 위한 코드 */ 
-	.peed_bg{
-		/* background-color: #ebefe3; */
-		background-color: yellow;
-		margin: 0 auto;
-		width: 1000px;
-		height: 110vh;
-	}
-	
-	/* create post */
-	.create_post{
-		background-color: pink;
-	}
-	.create_post > div{
-		font-size: 3rem;
-	}
-	
-
-	/* 오늘 있었던 일에 대해서 한 줄 적어주세요.에 해당하는 부분의 코드 */ 
-	.peed_create{
-		background-color: white;
-		margin: 60px auto;
-		padding: 0 10px;
-		width: 800px;
-		height: 100px;
-		border-radius: 20px 20px 20px 20px;
-	}
-	.peed_create_container{
-		width: 750px;
-		height: 90px;
-		margin: 10px 20px 15px 10px;
-	}
-	.peed_create_text{
-		float: right;
-		width: 600px;
-		text-align: left;
-		margin: 20px auto;
-		margin-left: 10px;
-		padding: 15px;
-		font-size: 1rem;
-		border: 5px solid #526534;
-		border-radius: 30px;
-	}
-	.peed_create_text:hover{
-		float: right;
-		width: 600px;
-		text-align: left;
-		margin: 20px auto;
-		margin-left: 10px;
-		padding: 15px;
-		font-size: 1rem;
-		border: 5px solid #526534;
-		border-radius: 30px;
-		background-color: beige;
-		cursor: pointer;
+.container{
+			margin: 100px; auto;
+		}
 		
+		.profile{
+			width: 80px;
+			margin: 0 auto;
+		}
+	
+		tr {
+			border: 5px solid pink;
+		}
+		td {
+			width: 100px;
+			background-color: #ebefe3;
+		}
+		td:last-child{
+			width: 100px;
+			background-color: white;
+		}
+		th {
+			width: 100px;
+		}
+		span {
+			font: bold;
+			font-size: 2em;
+		}
 		
-	}
-	
-	/* 하나의 피드 부분을 묶기 위한 코드 */
-	.peed_body{
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-start;
-		background-color: white;
-		margin: 30px auto 0px;
-		width: 800px;
-		border: 5px solid #b2bda0;
-	}
-	
-	/* 피드의 info 영역에 대한 코드 */
-	.peed_content_info{
-		background-color: white;
-		margin: 10px auto;
-		width: 800px;
-		height: 100px;
-	}
-	.peed_info_container{
-		width: 750px;
-		height: 90px;
-		margin: 5px auto;
-	}
-	.profile{
-		width: 85px;
-		height: 85px;
-		display: inline-block;
-		text-align: left;
-		margin: 5px auto;
-	}
-	.profile > img{
-		width: 85px;
-		height: 85px;
-		display: inline-block;
-	}
-	.info{
-		float: right;
-		height: 70px;
-		width: 650px;
-		text-align: left;
-		margin: 20px auto;
-	}
-	.username{
-		height: 35px;
-		font-weight: bold;
-		font-size: 1.5rem;
-	}
-	.writeTime{
-		height: 35px;
-	
-	}
-	
-	/* 피드의 text 영역에 대한 코드 */
-	.peed_content_text{
-		background-color: white;
-		margin: 5px auto;
-		width: 800px;
-	}
-	/* 피드의 img 영역에 대한 코드 이미지/동영상 택일이나 편의상 img로 네이밍*/
-	.peed_content_img{
-		background-color: white;
-		margin: 0 auto;
-		width: 800px;
-		height: 400px;
-	}
-	
-	/* img 중앙정렬을 위한 img-box */
-	.img-box{
- 		margin: 0 auto;
-		height: 400px;
-		display: flex;
-		justify-content: center;
-	}
-	.img-box img{
-		height: 400px;
-		justify-content: center;
-	}
-	.img-box > div{
-		background-color: #b2bda0;
- 		margin: 0 auto;
-		width: 800px;
-		justify-content: center;
-	}
-	
-	/* 좋아요, 댓글달기, 내 피드에 공유하기 선택 영역을 묶은 코드 */
-	.action_choose{
-		display:flex;
-		background-color: white;
-		margin: 10px auto 0px;
-		width: 800px;
-		height: 60px;
-		border-top: 5px solid #b2bda0;
-	}
-	.action_box{
-		background-color: white;
-		width: 260px;
-		height: 60px;
-		border-right: 5px solid #b2bda0;
-	}
-	.action_box + div{
-		background-color: white;
-		width: 260px;
-		height: 60px;
+		.tb_c_post{
+			background-color: white;
+			width: 800px;
+			height: 800px;
+			margin: 0 auto;
+			border: 5px solid #526534;
+			border-radius: 20px;
+		}
+		.profile_container{
+			margin: 0 auto;
+			display: flex;
+			justify-content : center;
+		}
+		.textarea_container{
+			margin: 0 auto;
+			padding: 10px;
+			witdh: 800px;
+		}
+		textarea{
+			background-color: white;
+			border: 5px solid #526534;
+			border-radius: 5px;
+			width: 93%;
+			height: 300px;
+			margin: 0 auto;
+			padding: 15px;
+			resize: none;
+		}
+		textarea::placeholder{
+			font-size: 1.2em;
+		}
+		.img_container{
+			margin: 0 auto;
+			display: flex;
+			justify-content : center;
+		}
+		.img_container > img{
+			width: 60px;
+			padding: 10px 30px;
+		}
+		.img_container > img:hover{
+			width: 60px;
+			padding: 10px 30px;
+			cursor: pointer;
+		}
 		
-	}
-	/* 공유하기 영역에 대한 코드 */
-/* 	.action_share{
-	} */
-	/* action */
-	.action_container{
-		width: 240px;
-		height: 50px;
-		margin: 5px auto;
-	}
-	.action_img{
-		display: inline-block;
-		text-align: left;
-		margin: 0 auto;
-		margin-left: 10px;
-		width: 50px;
-		height: 50px;
-	}
-	.action_img > img{
-		width: 50px;
-		height: 50px;
-		display: inline-block;
-	}
-	.action{
-		float: right;
-		height: 50px;
-		width: 170px;
-		text-align: center;
-		margin: 10px auto;
-		font-size: 2rem;
-		
-	}
-	
-	/* 댓글 영역 묶은 코드 */
-	.comment_body{
-		display: flex;
-		flex-direction: column;
-		background-color: white;
-		margin: 0px auto 60px;
-		width: 800px;
-		border-left: 5px solid #b2bda0;
-		border-right: 5px solid #b2bda0;
-		border-bottom: 5px solid #b2bda0;
-	}
+		.btn_container{
+			padding: 10px;
+			display: flex;
+			justify-content: flex-end;
+		}
+		.btn{
+			background-color: white;
+			width: 100px;
+			height: 60px;
+			border: 5px solid #526534;
+			border-radius: 20px;
+			padding: 10px;
+			font-size: 1.2em;
+		}
+		.btn:hover {
+			cursor: pointer;
+			color: white;
+			font-size: 1.2em;
+			background-color: #526534;
+		}

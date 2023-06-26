@@ -95,15 +95,17 @@
 			<!-- 첨부된 파일이 있는 경우 사용되는 코드 -->
 			<div class="peed_content_img img-box">
 				<div class="wrapper">
-					<a class="btn prevz" style="text-decoration: none; color: white;">&#10094;&nbsp;&nbsp;</a>
-					<div class="container">
+					<div class="img_container">
 						<ul class="slider">
-							<li class="item"><img src="img/icon/nav_logo.png">1</li>
-							<li class="item"><img src="img/icon/nav_logo.png">2</li>
-							<li class="item"><img src="img/icon/nav_logo.png">3</li>
+							<li class="img_item"><img src="img/icon/nav_logo.png">1</li>
+							<li class="img_item"><img src="img/icon/nav_logo.png">2</li>
+							<li class="img_item"><img src="img/icon/nav_logo.png">3</li>
 						</ul>
 					</div>
-					<a class="btn next" style="text-decoration: none; color: white;">&nbsp;&nbsp;&#10095;</a>
+					<div class="btn">
+						<a class="prev" style="text-decoration: none; color: white;">&nbsp;&nbsp;&#10094;</a>
+						<a class="next" style="text-decoration: none; color: white;">&nbsp;&nbsp;&#10095;</a>
+					</div>
 				</div>
 			</div>
 <!-- 				이미지/영상 <br/><br/>
@@ -150,21 +152,19 @@
 		</div>
 	<!-- DB 데이터 양에 따라 반복될 코드 end -->
 		
-		
 	</div>
 	<!-- section end -->
 
 	<!-- js파일 -->
 	<script type="text/javascript" src="js/code.jquery.com_jquery-3.7.0.min.js"></script>
-	<script type="text/javascript" src="js/peed/slide_img.js"></script>
 	<script type="text/javascript">
 		console.log("homePeed script tag");
-		console.log("수정 필요. < 버튼 동작x 함수 수정 javascript");
 	
 		function create_post() {
 			console.log("go to create post page");
 		}
 	</script>
+	<script type="text/javascript" src="js/peed/slide_img.js"></script>
 
 </body>
 </html>
