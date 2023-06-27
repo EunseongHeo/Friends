@@ -39,9 +39,9 @@
 		<beans:property name="configLocation" value="classpath:mybatis-config.xml"/>
 	</beans:bean>
 		
-<!-- 	<beans:bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+	<beans:bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
 		<beans:constructor-arg index="0" ref="sqlSessionFactory"></beans:constructor-arg>
-	</beans:bean> -->
+	</beans:bean>
 	
 	
 	<context:component-scan base-package="com.friends.controller" />
