@@ -39,7 +39,7 @@ public class HomeController {
 //	createPost 페이지로 분기
 	@RequestMapping("/createPost")
 	public String createPost() {
-		log.info("followRequest() Method of HomeController class");
+		log.info("createPost() Method of HomeController class");
 		return "/peed/createPost";
 	}
 	

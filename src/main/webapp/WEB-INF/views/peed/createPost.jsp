@@ -10,6 +10,8 @@
 	<!-- css 파일 -->
 	<link rel="stylesheet" href="css/simple_nav.css"/>
 	<link rel="stylesheet" href="css/peed/createPost.css"/>
+	<link rel="stylesheet" href="css/peed/createPost_preview.css"/>
+	
 </head>
 <body>
 	
@@ -23,74 +25,68 @@
 	
 	<!-- section start -->
 	<div class="peed_bg">
-		createPost.jsp 입니다.
 		<div class="container">
-			<form action="createPostOK">
-				<table class="tb_c_post" >
-					<tr>
-						<td rowspan="2" colspan="1">
-							<div class="profile_container">
-								<img alt="profile" src="img/icon/g_profile.png" class="profile">
+			<form method="post" onsubmit="javascript:chk()" action="createPostOK" enctype="multipart/form-data" >
+				<div class="tb_c_post">
+					<div class="info_container">
+						<div class="profile_container">
+							<img alt="profile" src="img/icon/g_profile.png" class="profile">
+						</div>
+						<div class="info">
+							<div>
+								<span >username</span>
+								<input type="hidden" name="username" value="user1">
 							</div>
-						</td>
-						<td>
-							<span>
-								username
-							</span>
-						</td>
-						<td colspan="3">&nbsp;</td>
-					</tr>
-					<tr>
-						<td>
-							range of showing
-						</td>
-						<td colspan="3">&nbsp;</td>
-					</tr>
-					<tr>
-						<td colspan="5">
-							<div class="textarea_container">
-								<textarea 
-									placeholder="username님, 무슨 생각을 하고 계신가요?" 
-									style="resize: none; overflow: hidden;"></textarea>
+							<div>
+								range of showing
 							</div>
-						</td>
-					</tr>
-					<tr>
-						<td>&nbsp;</td>
-						<td >
-							<div class="img_container">
-								<img alt="add images" src="img/icon/add_img.png" onclick="add_imgs()">
-								<img alt="add a video" src="img/icon/add_video.png" onclick="add_video()">
-								<img alt="tag someone" src="img/icon/add_tag.png" onclick="tag_someone()">
-							</div>
-						</td>
-						<td>&nbsp;</td>
-					</tr>
-					<tr>
-						<td colspan="5" >
-							<hr/>
-							<div class="btn_container">
-								<input class="btn" type="submit" value="게시"/>
-							</div>
-						</td>
-					</tr>
-				</table>
+						</div>
+					</div>
+					<div class="textarea_container">
+						<textarea 
+							placeholder="username님, 무슨 생각을 하고 계신가요?" 
+							style="resize: none; overflow: hidden;" name="text"></textarea>
+					</div >
+					<div class="tag">
+						태그 추가시 여기 나옴
+						<ul class="tag"></ul>
+					</div>
+					<div class="img_container">
+						<img class="icon_upload_img" alt="add images" src="img/icon/add_img.png">
+						<img class="icon_upload_video" alt="add a video" src="img/icon/add_video.png">
+						<img class="icon_tag_someone" alt="tag someone" src="img/icon/add_tag.png" onclick="tagSomeone()">
+						<input class="img-upload" name="images" type="file"  accept="image/*" required multiple >
+						<!-- <input class="video-upload" name="video" type="file" accept="video/*" required > -->
+					</div>
+					<hr/>
+					<div class="btn_container">
+						<input class="btn" type="submit" value="게시"/>
+					</div>
+				</div>
 			</form>
 		</div>
 	</div>
 	<!-- section end -->
 
-
-	<script type="text/javascript">
-		function add_imgs(){
-			console.log('add images event.');
-		}
-		function add_video(){
-			console.log('add a video event.');
-		}
-		function tag_someone(){
-			console.log('tag someone event.');
+	<script type="text/javascript" src="js/peed/createPost.js"></script>
+	<script>
+		function chk() {
+			console.log('submit 동작');
 		}
 	</script>
+	
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
