@@ -26,7 +26,7 @@
 	<!-- section start -->
 	<div class="peed_bg">
 		<div class="container">
-			<form method="post" onsubmit="javascript:chk()" action="createPostOK" enctype="multipart/form-data" >
+			<form method="post" action="createPostOK" enctype="multipart/form-data" >
 				<div class="tb_c_post">
 					<div class="info_container">
 						<div class="profile_container">
@@ -55,8 +55,6 @@
 						<img class="icon_upload_img" alt="add images" src="img/icon/add_img.png">
 						<img class="icon_upload_video" alt="add a video" src="img/icon/add_video.png">
 						<img class="icon_tag_someone" alt="tag someone" src="img/icon/add_tag.png" onclick="tagSomeone()">
-						<input class="img-upload" name="images" type="file"  accept="image/*" required multiple >
-						<!-- <input class="video-upload" name="video" type="file" accept="video/*" required > -->
 					</div>
 					<hr/>
 					<div class="btn_container">
@@ -70,9 +68,6 @@
 
 	<script type="text/javascript" src="js/peed/createPost.js"></script>
 	<script>
-		function chk() {
-			console.log('submit 동작');
-		}
 	</script>
 	
 </body>

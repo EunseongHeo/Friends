@@ -41,7 +41,7 @@ public class HomePeedController {
 		}
 		
 		
-		return "/peed/homePeed";
+		return "redirect:home";
 	}
 	
 	
