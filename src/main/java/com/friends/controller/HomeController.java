@@ -69,7 +69,7 @@ private static final String UserInfoDTO = null;
 		String userId = "user1";
 		
 		ArrayList<FollowDTO> follow = mapper.selectByFollow(userId);
-		System.out.println(follow.get(0).getFollow());
+//		System.out.println(follow.get(0).getFollow());
 		model.addAttribute("followRequest", follow);
 		
 		return "/peed/followRequest";

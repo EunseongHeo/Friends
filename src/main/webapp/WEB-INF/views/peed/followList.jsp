@@ -49,12 +49,12 @@
 	<div class="peed_bg">
 		<div class="" style="height: 170px">&nbsp;</div>
 		<div style="margin-left: 30px;">
-				<button class="myButton">
-					<a href="followRequest">request</a>
+				<button  class="myButton" onclick="location.href='followRequest';">
+					request
 				</button>
 				&nbsp;&nbsp;
 				<button class="myButton_2">
-					<a href="followList">follow</a>
+					follow
 				</button>
 			</div>
 			<div style="margin: 50px 0px 0px 70px;">

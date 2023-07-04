@@ -10,6 +10,8 @@ public interface MyPeedMapper {
 
 	ArrayList<FollowDTO> selectByFollow(String userId);
 	ArrayList<FollowDTO> selectByFollowList(String userId);
+	void insertRequest(FollowDTO f_DTO);
+	void requestDelete(FollowDTO f_DTO);
 
 
 

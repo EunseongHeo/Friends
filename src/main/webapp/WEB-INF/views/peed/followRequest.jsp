@@ -11,6 +11,11 @@
 <!-- css 파일 -->
 <link rel="stylesheet" href="css/peed/follow.css">
 <link rel="stylesheet" href="css/nav.css" />
+
+<!-- js -->
+<script type="text/javascript" src="js/code.jquery.com_jquery-3.7.0.min.js"></script>
+<script type="text/javascript" src="js/peed/follow.js" defer="defer"></script>
+
 </head>
 <body>
 
@@ -50,20 +55,26 @@
 		<div class="" style="height: 170px;">&nbsp;</div>
 		<div style="margin-left: 30px;">
 			<button class="myButton">
-				<a href="#">request</a>
+				request
 			</button>
 			&nbsp;&nbsp;
-			<button class="myButton_2">
-				<a href="followList">follow</a>
+			<button class="myButton_2" onclick="location.href='followList';">
+				follow
 			</button>
 		</div>
 		<div style="margin: 50px 0px 0px 70px;">
 			<table width="600px" border="0" cellpadding="5" cellspacing="0" >
-				<c:forEach var="follow" items="${followRequest}">
+				<c:forEach var="follow" items="${followRequest}" varStatus="status">
 					<tr>
 						<td width="70" height="70"> <img alt="" height="70px" src="img/icon/g_profile.png"> </td>
 						<td width="300">${follow.userName}</td>
-						<td>button</td>
+						<td>
+							<%-- <input type="text" name="followName${status.index}" value="${follow.userName}"/> --%>
+							<button class="btn_agr" type="button" onclick="followAgree('${follow.userName}')">수락</button>
+							<button class="btn_agr2" type="button" onclick="followDelete('${follow.userName}')">삭제</button>
+							<%-- <button type="button" name="userName" onclick="location.href='requestOk?${follow.userName}'" }>수락</button> --%>
+							
+						</td>
 					</tr>
 					
 				</c:forEach>
