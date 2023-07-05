@@ -11,6 +11,8 @@
 	<link rel="stylesheet" href="css/simple_nav.css"/>
 	<link rel="stylesheet" href="css/peed/createPost.css"/>
 	<link rel="stylesheet" href="css/peed/createPost_preview.css"/>
+	<!-- jquery -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	
 </head>
 <body>
@@ -26,7 +28,7 @@
 	<!-- section start -->
 	<div class="peed_bg">
 		<div class="container">
-			<form method="post" onsubmit="javascript:chk()" action="createPostOK" enctype="multipart/form-data" >
+			<form method="post" onsubmit="javascript:submit()" enctype="multipart/form-data" >
 				<div class="tb_c_post">
 					<div class="info_container">
 						<div class="profile_container">
@@ -34,7 +36,7 @@
 						</div>
 						<div class="info">
 							<div>
-								<span >username</span>
+								<span id="username">username</span>
 								<input type="hidden" name="username" value="user1">
 							</div>
 							<div>
@@ -45,7 +47,7 @@
 					<div class="textarea_container">
 						<textarea 
 							placeholder="username님, 무슨 생각을 하고 계신가요?" 
-							style="resize: none; overflow: hidden;" name="text"></textarea>
+							style="resize: none; overflow: hidden;" id="text"></textarea>
 					</div >
 					<div class="tag">
 						태그 추가시 여기 나옴
@@ -55,12 +57,10 @@
 						<img class="icon_upload_img" alt="add images" src="img/icon/add_img.png">
 						<img class="icon_upload_video" alt="add a video" src="img/icon/add_video.png">
 						<img class="icon_tag_someone" alt="tag someone" src="img/icon/add_tag.png" onclick="tagSomeone()">
-						<input class="img-upload" name="images" type="file"  accept="image/*" required multiple >
-						<!-- <input class="video-upload" name="video" type="file" accept="video/*" required > -->
 					</div>
 					<hr/>
 					<div class="btn_container">
-						<input class="btn" type="submit" value="게시"/>
+						<input class="btn" type="button" onclick="javascript:creratePost_submit()" value="게시"/>
 					</div>
 				</div>
 			</form>
@@ -70,9 +70,7 @@
 
 	<script type="text/javascript" src="js/peed/createPost.js"></script>
 	<script>
-		function chk() {
-			console.log('submit 동작');
-		}
+		
 	</script>
 	
 </body>
