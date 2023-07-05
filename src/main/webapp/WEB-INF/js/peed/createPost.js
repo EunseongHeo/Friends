@@ -8,7 +8,9 @@
 
 const textareaDiv = document.querySelector('.textarea_container');
 const addActionDiv = document.querySelector('.img_container');
-const uploadFiles = [];
+const imgIcon = document.querySelector('.icon_upload_img');	//img _클릭시 input 파일 선택
+const videoIcon = document.querySelector('.icon_upload_video');	//img _클릭시 input 파일 선택 
+let uploadFiles = [];
 
 function imgPreview(e) {
 	
@@ -52,7 +54,6 @@ function imgPreview(e) {
 				return	
 			}
 			uploadFiles.push([...files][i]);
-			console.log([...files][i]);
 		}
 	}
 	
@@ -120,12 +121,8 @@ function createVideoElement(e, videoFile){
 
 // 이벤트 및 실행 내용 
 
-const imgIcon = document.querySelector('.icon_upload_img');	//img _클릭시 input 파일 선택
-const videoIcon = document.querySelector('.icon_upload_video');	//img _클릭시 input 파일 선택 
-
 // 이미지 파일 업로드 이벤트
 imgIcon.addEventListener('click', () => {
-	
 	if(document.querySelector('.video-upload') !== null){
 		alert('이미지와 동영상은 함께 게시할 수 없습니다.');
 		return;
@@ -148,7 +145,6 @@ imgIcon.addEventListener('click', () => {
 	
 // 동영상 아이콘 클릭 시 input click, getVideoFile로 프리뷰
 videoIcon.addEventListener('click', () => {
-	
 	if(document.querySelector('.img-upload') !== null){
 		alert('이미지와 동영상은 함께 게시할 수 없습니다.');
 		return;
@@ -169,7 +165,6 @@ videoIcon.addEventListener('click', () => {
 	videoUpload = document.querySelector('.video-upload');
 	videoUpload.click(); 
 	videoUpload.addEventListener('change', previewVideo);	//파일 추가시 프리뷰 영상 띄우기
-	
 });
 
 function tagSomeone() { // addEventListener를 사용한 코드로 변경 예정 
@@ -178,5 +173,61 @@ function tagSomeone() { // addEventListener를 사용한 코드로 변경 예정
 
 
 // ajax로 파일에 대한 실업로드와 db 데이터 입력에 대한 코드
-
+//file 업로드 즉, file 페이지에 작성 (우선), 컨트롤러에서 action 처리시, post 테이블 데이터 작성
+function creratePost_submit() {
+	var input = document.querySelector('.img-upload');
+	
+	console.log('uploadFiles[0].files: ' + uploadFiles[0].files);
+	console.log('uploadFiles[0]: ' + uploadFiles[0]);
+	console.log('uploadFiles: ' + uploadFiles);
+	console.log('input.files: ' + input.files);
+	console.log('input.files: ' + input.files.length);
+	console.log('input.files[0]: ' + input.files[0]);
+	console.log(uploadFiles[1].files);
+	console.log(uploadFiles[2].files);
+	console.log(uploadFiles[3].files);
+	console.log(uploadFiles[4].files);
+	
+//	fileList와 배열은 다름. 
+//	fileList를 만들기 위해 DataTransfer를 생성함.
+	var dataTransfer = new DataTransfer();
+	for(let i=0; i<uploadFiles.length; i++){
+		dataTransfer.items.add(uploadFiles[i]);
+	}
+	var fileList = dataTransfer.files;
+	console.log(fileList)
+	console.log(typeof(fileList));
+	
+	
+	
+	
+	var formData = new FormData();
+	
+//	공개범위 기능 추가 시 여기에 코드 추가. 컨트롤러에 코드 추가.
+	
+//	add file data to formdata
+	for (var i=0; i<uploadFiles.length; i++){
+		formData.append("uploadFiles", uploadFiles[i]);
+//		formData.append("username", document.getElementById('username').innerHTML);
+//		formData.append("text", document.getElementById('text').value);
+	}
+	
+	jQuery.ajax({
+		url : './post/create',
+		type: 'POST',
+		processData : false, 
+		contentType : false,
+        data : formData,
+        success: function(response){
+        	alert('success request ./post/create');
+        }, 
+        error: function (jqXHR){
+        	alert(jqXHR.responseText);
+        	console.log('jqXHR: ' + jqXHR);
+        	console.log('jqXHR.status: ' + jqXHR.status);
+        	console.log('jqXHR.statusText: ' + jqXHR.statusText);
+        	console.log('fail');
+        }
+	})
+}
 
