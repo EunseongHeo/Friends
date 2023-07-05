@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+.myButton {
+	background-color: #526534;
+    color: #fff;
+    border:none;
+    border-radius:25px;
+	font-family:Arial;
+	font-size:17px;
+	text-decoration:none;
+	width : 150px;
+	height : 50px;
+	
+}
+
+.myButton_2 {
+	background-color: #8D9E6F;
+	border-radius:25px;
+	border: none;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	text-decoration:none;
+	width : 150px;
+	height : 50px;
+}
+
+.btn_agr {
+	background-color: #526534;
+    color: #fff;
+    border:none;
+    border-radius:15px;
+    font-family:Arial;
+	font-size:17px;
+	text-decoration:none;
+	width : 100px;
+	height : 30px;
+}
+
+.btn_agr2 {
+	background-color: #8D9E6F;
+    color: #fff;
+    border:none;
+    border-radius:15px;
+    font-family:Arial;
+	font-size:17px;
+	text-decoration:none;
+	width : 100px;
+	height : 30px;
+}
+
+
+a:link { color: white; } 
+a:visited { color: brown; } 
+a:hover { color: coral; } 
+a:active { color: khaki; }

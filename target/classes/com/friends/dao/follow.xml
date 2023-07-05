@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.friends.dao.MyPeedMapper">
+	
+	<!-- 팔로워 -->
+	<select id="selectByFollow" parameterType="String" resultType="com.friends.dto.FollowDTO">
+		select * from follow where follow = #{follow}
+	</select>
+	
+	<select id="selectByFollowList" parameterType="String" resultType="com.friends.dto.FollowDTO">
+		select * from follow where username = #{username}  
+	</select>
+	
+	<insert id="insertRequest" parameterType="com.friends.dto.FollowDTO">
+		insert into follow(username, follow) values(#{username}, #{follow})
+	</insert>
+	
+	<delete id="requestDelete" parameterType="com.friends.dto.FollowDTO">
+		delete follow where username=#{username} and follow=#{follow}
+	</delete>
+	
+</mapper>
